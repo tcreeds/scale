@@ -1,5 +1,5 @@
 var students = []
-let list;
+let list
 $(document).ready(() => {
     list = $('#studentList')
     if (localStorage.getItem('students') !== null){
@@ -36,7 +36,9 @@ function saveStudents(){
 }
 
 function clearStudents(){
-    localStorage.setItem('students', JSON.stringify([]))
+    students = []
+    localStorage.setItem('students', JSON.stringify(students))
+    list.html('')
     console.log(JSON.parse(localStorage.getItem('students')))
 }
 

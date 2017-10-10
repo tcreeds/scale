@@ -9,7 +9,6 @@ p{
     margin-bottom: 3em;
     padding-bottom: 0.3em;
     border-bottom: 2px solid rgb(27, 72, 224);
-    max-width: 40em;
 }
 ul{
     padding: 0;
@@ -17,8 +16,11 @@ ul{
 }
 li{
     margin: 0.5em 0.5em 0.5em 0;
+    padding: 0.5em;
     font-size: 1.3em;
     list-style-type: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
 }
 button{
     font-size: 1em;
@@ -34,15 +36,17 @@ button:hover{
     background: rgb(14, 66, 169);
 }
 input{
+    padding-left: 0.2em;
     font-size: 1.2em;
     border: 1px solid transparent;
     transition: border 0.25s ease;
 }
 input:hover{
-    border: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 .container{
     margin: 1em;
+    max-width: 40em;
 }
 .student-score{
     width: 3em;
