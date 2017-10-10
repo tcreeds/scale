@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Crash';
+  src: url('Crasns.ttf') format('truetype');
+}
+body{
+    font-family: Helvetica;
+}
+p{
+    margin-bottom: 3em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid rgb(27, 72, 224);
+    max-width: 40em;
+}
+ul{
+    padding: 0;
+    margin-bottom: 3em;
+}
+li{
+    margin: 0.5em 0.5em 0.5em 0;
+    font-size: 1.3em;
+    list-style-type: none;
+}
+button{
+    font-size: 1em;
+    padding: 0.5em 1em;
+    background: rgb(27, 72, 224);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+button:hover{
+    background: rgb(14, 66, 169);
+}
+input{
+    font-size: 1.2em;
+    border: 1px solid transparent;
+    transition: border 0.25s ease;
+}
+input:hover{
+    border: 1px solid grey;
+}
+.container{
+    margin: 1em;
+}
+.student-score{
+    width: 3em;
+}
+.student-grade{
+    font-family: Crash;
+    margin-left: 1em;
+    font-size: 1.7em;
+    border-bottom: 1px solid rgb(27, 72, 224);
+}
