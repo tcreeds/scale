@@ -44,9 +44,7 @@ function clearStudents(){
 
 function updateStudent(id){
     let studentLI = $(`li[studentId=${id}]`)
-    let num = studentLI.children('.student-score').val()
-    console.log(num)
-    let score = +num
+    let score = studentLI.children('.student-score').val()
     let name = studentLI.children('.student-name').val()
 
     let student = students.find((s) => s.id == id)
@@ -60,7 +58,7 @@ function updateStudent(id){
 }
 
 function calculateGrade(x, y=1.42, z=60) {
-    if (Number.parseFloat(x))
+    if (Number.parseFloat(x) || x === 0 || x === '0')
         return (Math.pow(Math.max(0, x-z) / (100-z), 1/y) * (100-z) + z).toPrecision(4)
     return ''
 }
