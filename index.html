@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
 <script src="https://unpkg.com/vue"></script>
 <link href='main.css' rel='stylesheet'></link>
-<script src='main.js'></script>
-<div id='app'>
-  <ul>
-    <li is='student-item' v-for='student in students' :name='student.name' :score='student.score' :key='student.id'>
-    </li>
-  </ul>
-</div>
+
 <div class=container>
     <h1>Scale!</h1>
     <p>Transform those scores to meaningful grades, that give you a better guage of competency and learning than traditional 0-100 scoring.
-    <ul id="studentList">
-
-    </ul>
-    <button onclick='createStudent()'>Add Student</button>
-    <button onclick='saveStudents()'>Save Students</button>
-    <button onclick='clearStudents()'>Clear Students</button>
+    <div id='app'>
+      <ul>
+        <li v-for='student in students' :student='student' :key='student.id'>
+          <input class='student-name' type='text' placeholder='Name' v-model='student.name'></input>
+          <input class='student-score' type='text' placeholder='Score' v-model='student.score'></input>
+          <span class='student-grade'>{{ calculateGrade(student.score) }}</span>
+        </li>
+      </ul>
+      <button v-on:click='addStudent'>Add Student</button>
+      <button v-on:click='saveStudents'>Save Students</button>
+      <button v-on:click='clearStudents'>Clear Students</button>
+    </div>
 </div>
-
 
 <script src='app.js'></script>
